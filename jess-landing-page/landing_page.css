@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    /* make the border visible for debugging an element's margin and padding */
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    /*border-color: red;*/
+
+    /** include an element's padding and border within its total
+    width and height calculation. **/
+    box-sizing: border-box;
+
+    /* zero out padding and margin so we can control it later */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;  /* must set font manually */
+    background-color: white;
+}
+
+section#header, section#intro, section#information,
+section#quotation, section#footer {
+    color: white;
+
+    /* leave space for two side columns */
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+section#header {
+    background-color: navy;  /* TODO: use provided color instead */
+
+    /* flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#header .logo-link-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section#header .logo-link {
+    text-decoration: none;  /* remove underlines */
+    color: white;  /* must set color of links manually */
+}
+
+section#header .header-link-container {
+    list-style-type: none;  /* no bullets */
+
+    /* flexbox */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section#header .header-link {
+    display: inline;  /* make links appear adjacent to each other */
+    text-decoration: none;  /* remove underlines */
+    color: white;  /* must set color of links manually */
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+section#intro {
+    background-color: black;  /* TODO: use provided color instead */
+}
+
+section#intro .intro-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 0;
+    padding-right: 0;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: row;
+}
+
+section#intro .intro-description-container,
+section#intro .intro-image-container {
+    width: 50%;
+}
+
+section#intro .intro-description-container {
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+}
+
+section#intro .intro-title {
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+section#intro .intro-description {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+section#intro .intro-sign-up-button {
+    font-family: "Roboto", sans-serif;  /* must set button font manually */
+    background-color: dodgerblue;  /* TODO: use provided color instead */
+    color: white;  /* must set button text color manually */
+    width: 125px;
+    border-radius: 4px;
+    border: none;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    /* TODO: How do I control the alignment of the button?
+        e.g., left justify, center, right justify */
+}
+
+section#intro .intro-image-container {
+
+}
+
+section#intro .profile-picture {
+    width: 450px;
+    height: 225px;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+
+section#information {
+    background-color: green;  /* TODO: use provided color instead */
+
+    padding-top: 50px;
+}
+
+section#information .info-container {
+
+}
+
+section#information .info-title {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+section#information .image-collection {
+    padding-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 200px;
+
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section#information .multi-image-container {
+    width: 200px;
+
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#information .info-image {
+    height: 150px;
+    width: 100%;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 8px;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+section#information .info-caption {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+section#quotation {
+    background-color: purple;  /* TODO: use provided color instead */
+}
+
+section#quotation .quote-container {
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    display: block;
+}
+
+section#quotation .quotation {
+    text-align: left;
+    font: 36px light italic;
+    font-family: "Roboto Light", sans-serif;  /* must set font manually */
+
+    margin-bottom: 20px;
+}
+
+section#quotation .quote-author {
+    text-align: right;
+    font: 24px bold;
+    font-family: "Roboto", sans-serif;  /* must set font manually */
+}
+
+section#call-to-action {
+    background-color: white;
+    color: black;
+}
+
+section#call-to-action .call-to-action-container {
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    /* flexbox */
+    display: flex;
+    justify-content: space-around;
+}
+
+section#call-to-action .call-to-action-prompt {
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+}
+
+section#call-to-action .call-to-action-message {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+section#call-to-action .call-to-action-task {
+
+}
+
+section#call-to-action .call-to-action-button-container {
+    /* flexbox */
+    display: flex;
+    align-items: center;
+}
+
+section#call-to-action .call-to-action-button {
+    width: 150px;
+    height: 70%;
+    font-family: "Roboto", sans-serif;  /* must set font manually */
+    font-size: 20px;
+    background-color: blue;  /* must set background color manually */
+    color: white;  /* must set font color manually */
+    border-color: white;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+section#footer {
+    background-color: black;  /* TODO: use provided color instead */
+}
+
+section#footer .footer-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+
+    text-align: center;
+}
+
+section#footer .copyright-message {
+    font-size: 18px;
+    color: white;
+}
+
+section#footer a {
+    font-size: 18px;
+    color: skyblue;
+    text-decoration: underline;
+}
